@@ -15,6 +15,8 @@ gsap.registerPlugin(ScrollTrigger)
 
 let lenis
 
+home()
+
 window.addEventListener('resize', () => {
   lenis.resize()
 })
