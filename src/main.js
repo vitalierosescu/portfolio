@@ -23,7 +23,6 @@ barba.hooks.after(() => {
   lenis.resize()
   setTimeout(() => {
     lenis.resize()
-    console.log('resized')
   }, 1000)
 
   const $home = document.querySelector('[data-barba-namespace="home"]')
@@ -42,10 +41,6 @@ const startLenis = () => {
     smoothTouch: false,
     autoResize: true,
   })
-
-  // lenis.on('scroll', ({ scroll, limit }) => {
-  //   console.log({ scroll, limit })
-  // })
 
   function raf(time) {
     lenis.raf(time)
@@ -80,13 +75,12 @@ const init = () => {
 init()
 
 barba.init({
-  debug: true,
+  debug: false,
   transitions: [
     {
       name: 'default-transition',
       once: () => {
         startLenis()
-        // home()
       },
       async leave({ current }) {
         lenis.stop()
