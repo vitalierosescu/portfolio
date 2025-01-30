@@ -1,6 +1,6 @@
 import { gsap } from 'gsap'
-import { Draggable } from 'gsap/Draggable'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import Draggable from 'gsap/Draggable'
+import ScrollTrigger from 'gsap/ScrollTrigger'
 import $ from 'jquery'
 
 gsap.registerPlugin(ScrollTrigger, Draggable)
